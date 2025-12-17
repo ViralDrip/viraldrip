@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViralDrip.ai | AI-Powered Instagram DM Systems</title>
+    <meta name="description" content="Stop losing leads. We build AI agents that qualify your Instagram leads, sound exactly like you, and convert while you sleep." />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://viraldrip.ai" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f97316" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://viraldrip.ai" />
+    <meta property="og:title" content="ViralDrip.ai | AI-Powered Instagram DM Systems" />
+    <meta property="og:description" content="Stop losing leads. We build AI agents that qualify your Instagram leads, sound exactly like you, and convert while you sleep." />
+    <meta property="og:image" content="https://viraldrip.ai/og-image.png" />
+    <meta property="og:site_name" content="ViralDrip.ai" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://viraldrip.ai" />
+    <meta name="twitter:title" content="ViralDrip.ai | AI-Powered Instagram DM Systems" />
+    <meta name="twitter:description" content="Stop losing leads. We build AI agents that qualify your Instagram leads, sound exactly like you, and convert while you sleep." />
+    <meta name="twitter:image" content="https://viraldrip.ai/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                orange: '#F97316',
+                'orange-dark': '#EA580C',
+                'orange-light': '#FDBA74',
+                dark: '#0F172A',
+                gray: '#F8FAFC',
+              }
+            },
+            boxShadow: {
+              'brand': '0 4px 14px 0 rgba(249, 115, 22, 0.25)',
+              'brand-lg': '0 10px 40px 0 rgba(249, 115, 22, 0.3)',
+              'card': '0 2px 8px 0 rgba(15, 23, 42, 0.06)',
+              'card-hover': '0 8px 30px 0 rgba(15, 23, 42, 0.12)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-in': 'bounceIn 0.5s ease-out forwards',
+              'slide-up': 'slideUp 0.4s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+              'scale-pop': 'scalePop 0.3s ease-out forwards',
+              'fade-in': 'fadeIn 0.4s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'ping-once': 'pingOnce 1s ease-out forwards',
+              'fill-bar': 'fillBar 1s ease-out forwards',
+              'count-up': 'countUp 0.3s ease-out forwards',
+              'marquee': 'marquee 40s linear infinite',
+              'scroll': 'scroll 120s linear infinite',
+              'blob': 'blob 7s infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              bounceIn: {
+                '0%': { transform: 'scale(0.3)', opacity: '0' },
+                '50%': { transform: 'scale(1.05)' },
+                '70%': { transform: 'scale(0.9)' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideInLeft: {
+                '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              slideInRight: {
+                '0%': { transform: 'translateX(30px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              scalePop: {
+                '0%': { transform: 'scale(0.8)', opacity: '0' },
+                '50%': { transform: 'scale(1.1)' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              pingOnce: {
+                '0%': { transform: 'scale(1)', opacity: '1' },
+                '75%': { transform: 'scale(1.5)', opacity: '0' },
+                '100%': { transform: 'scale(1.5)', opacity: '0' },
+              },
+              fillBar: {
+                '0%': { width: '0%' },
+                '100%': { width: '100%' },
+              },
+              countUp: {
+                '0%': { transform: 'translateY(10px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              shimmer: {
+                from: { backgroundPosition: '0 0' },
+                to: { backgroundPosition: '-200% 0' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Calendly inline widget -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Smooth marquee animation */
+      .animate-marquee {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

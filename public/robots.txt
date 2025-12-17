@@ -1,0 +1,7 @@
+# Robots.txt for viraldrip.ai
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://viraldrip.ai/sitemap.xml
