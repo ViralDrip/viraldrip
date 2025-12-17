@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         }}
       />
 
-      <div className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
+      <div className="relative pt-24 sm:pt-32 pb-8 sm:pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
 
         {/* Top Badge */}
         <div className="animate-fade-in-up [animation-delay:0ms] inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-5 sm:mb-8 transition-colors hover:border-orange-200 hover:bg-orange-50/50 cursor-default group">
