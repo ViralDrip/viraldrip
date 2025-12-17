@@ -1,7 +1,49 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ShieldCheck, Clock, Zap, MapPin, Target, Lightbulb } from 'lucide-react';
 
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (options: {
+        url: string;
+        parentElement: HTMLElement;
+      }) => void;
+    };
+  }
+}
+
 const CalendlySection: React.FC = () => {
+  const calendlyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const initCalendly = () => {
+      if (calendlyRef.current && window.Calendly) {
+        // Clear any existing content
+        calendlyRef.current.innerHTML = '';
+        window.Calendly.initInlineWidget({
+          url: 'https://calendly.com/jonas-algowerk/30min-meeting-clone?hide_event_type_details=1&hide_gdpr_banner=1&text_color=0f172a&primary_color=f97316',
+          parentElement: calendlyRef.current,
+        });
+      }
+    };
+
+    // Try to init immediately if script is already loaded
+    if (window.Calendly) {
+      initCalendly();
+    } else {
+      // Wait for script to load
+      const checkCalendly = setInterval(() => {
+        if (window.Calendly) {
+          clearInterval(checkCalendly);
+          initCalendly();
+        }
+      }, 100);
+
+      // Cleanup
+      return () => clearInterval(checkCalendly);
+    }
+  }, []);
+
   return (
     <section id="calendly-section" className="relative py-24 bg-slate-900 overflow-hidden">
       {/* Background Pattern */}
@@ -107,8 +149,8 @@ const CalendlySection: React.FC = () => {
 
               {/* Calendly Embed - Responsive height */}
               <div
-                className="calendly-inline-widget w-full h-[500px] sm:h-[580px] md:h-[650px]"
-                data-url="https://calendly.com/jonas-algowerk/30min-meeting-clone?hide_event_type_details=1&hide_gdpr_banner=1&text_color=0f172a&primary_color=f97316"
+                ref={calendlyRef}
+                className="w-full h-[500px] sm:h-[580px] md:h-[650px]"
               />
             </div>
 
