@@ -7,10 +7,32 @@ const AnimatedReactivation: React.FC = () => {
   const [recoveredAmount, setRecoveredAmount] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
 
   const [loopKey, setLoopKey] = useState(0);
 
+  // Observe when component enters viewport
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    // Don't start animation until in view
+    if (!isInView) return;
     // Clear previous timers
     timersRef.current.forEach(t => clearTimeout(t));
     timersRef.current = [];
@@ -60,9 +82,10 @@ const AnimatedReactivation: React.FC = () => {
     timers.push(setTimeout(() => setLoopKey(k => k + 1), 25000));
 
     return () => timers.forEach(t => clearTimeout(t));
-  }, [loopKey]);
+  }, [loopKey, isInView]);
 
   return (
+    <div ref={containerRef}>
     <PhoneMockup headerTitle="Your AI Agent" headerSubtitle="Win-back mode">
       <div className={`relative h-[360px] transition-opacity duration-700 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
         {/* Inactive Lead Profile */}
@@ -235,6 +258,7 @@ const AnimatedReactivation: React.FC = () => {
         )}
       </div>
     </PhoneMockup>
+    </div>
   );
 };
 

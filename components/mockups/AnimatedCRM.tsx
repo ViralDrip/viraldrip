@@ -7,10 +7,32 @@ const AnimatedCRM: React.FC = () => {
   const [kanbanPosition, setKanbanPosition] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
 
   const [loopKey, setLoopKey] = useState(0);
 
+  // Observe when component enters viewport
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    // Don't start animation until in view
+    if (!isInView) return;
     // Clear previous timers
     timersRef.current.forEach(t => clearTimeout(t));
     timersRef.current = [];
@@ -61,7 +83,7 @@ const AnimatedCRM: React.FC = () => {
     timers.push(setTimeout(() => setLoopKey(k => k + 1), 20000));
 
     return () => timers.forEach(t => clearTimeout(t));
-  }, [loopKey]);
+  }, [loopKey, isInView]);
 
   const existingLeads = [
     { name: 'Mike R.', score: 72, stage: 'Qualified' },
@@ -77,7 +99,7 @@ const AnimatedCRM: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative" ref={containerRef}>
       {/* Dashboard Container */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl overflow-hidden max-w-[420px] mx-auto">
         {/* Header */}

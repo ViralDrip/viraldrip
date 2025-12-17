@@ -8,10 +8,32 @@ const AnimatedQualification: React.FC = () => {
   const [temperature, setTemperature] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
 
   const [loopKey, setLoopKey] = useState(0);
 
+  // Observe when component enters viewport
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    // Don't start animation until in view
+    if (!isInView) return;
     // Clear previous timers
     timersRef.current.forEach(t => clearTimeout(t));
     timersRef.current = [];
@@ -68,7 +90,7 @@ const AnimatedQualification: React.FC = () => {
     timers.push(setTimeout(() => setLoopKey(k => k + 1), 15000));
 
     return () => timers.forEach(t => clearTimeout(t));
-  }, [loopKey]);
+  }, [loopKey, isInView]);
 
   const getTempColor = () => {
     if (temperature < 40) return 'from-blue-400 to-blue-500';
@@ -83,6 +105,7 @@ const AnimatedQualification: React.FC = () => {
   };
 
   return (
+    <div ref={containerRef}>
     <PhoneMockup headerTitle="Your AI Agent" headerSubtitle="Qualifying leads">
       <div className={`relative h-[360px] transition-opacity duration-700 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
         {/* Messages */}
@@ -196,6 +219,7 @@ const AnimatedQualification: React.FC = () => {
         )}
       </div>
     </PhoneMockup>
+    </div>
   );
 };
 
