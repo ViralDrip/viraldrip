@@ -100,21 +100,20 @@ const CalendlySection: React.FC = () => {
 
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
               {/* Calendly Header */}
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-4">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-4 sm:px-6 py-4">
                 <h3 className="text-white font-bold text-lg">Pick Your Time</h3>
                 <p className="text-orange-100 text-sm">Choose a slot that works for you</p>
               </div>
 
-              {/* Calendly Embed - Using inline widget approach */}
+              {/* Calendly Embed - Responsive height */}
               <div
-                className="calendly-inline-widget"
+                className="calendly-inline-widget w-full h-[500px] sm:h-[580px] md:h-[650px]"
                 data-url="https://calendly.com/jonas-algowerk/30min-meeting-clone?hide_event_type_details=1&hide_gdpr_banner=1&text_color=0f172a&primary_color=f97316"
-                style={{ minWidth: '320px', height: '700px' }}
               />
             </div>
 
-            {/* Steps Below */}
-            <div className="mt-6 flex items-center justify-center gap-4 text-sm">
+            {/* Steps Below - Hidden on mobile for cleaner look */}
+            <div className="mt-6 hidden sm:flex items-center justify-center gap-4 text-sm">
               {['Pick time', 'Confirm', 'Get blueprint'].map((step, i) => (
                 <React.Fragment key={i}>
                   <div className="flex items-center gap-2">
