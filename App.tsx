@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProcessSection from './components/ProcessSection';
@@ -12,8 +13,11 @@ import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import StickyBottomCTA from './components/StickyBottomCTA';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
-const App: React.FC = () => {
+// Home page component with all the landing page sections
+const HomePage: React.FC = () => {
   return (
     <div className="font-sans antialiased text-slate-900 bg-white min-h-screen">
       <Header />
@@ -122,6 +126,19 @@ const App: React.FC = () => {
       {/* Mobile Sticky CTA */}
       <StickyBottomCTA />
     </div>
+  );
+};
+
+// Main App with routing
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+      </Routes>
+    </Router>
   );
 };
 
