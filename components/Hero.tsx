@@ -42,51 +42,53 @@ const Hero: React.FC = () => {
         }}
       />
 
-      <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
+      <div className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
 
         {/* Top Badge */}
-        <div className="animate-fade-in-up [animation-delay:0ms] inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-8 transition-colors hover:border-orange-200 hover:bg-orange-50/50 cursor-default group">
+        <div className="animate-fade-in-up [animation-delay:0ms] inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-5 sm:mb-8 transition-colors hover:border-orange-200 hover:bg-orange-50/50 cursor-default group">
           <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
-          <span className="text-sm font-medium text-slate-600 group-hover:text-orange-700">For Coaches & Course Creators</span>
+          <span className="text-xs sm:text-sm font-medium text-slate-600 group-hover:text-orange-700">For Coaches & Course Creators</span>
         </div>
 
         {/* Main Headline */}
-        <h1 className="animate-fade-in-up [animation-delay:200ms] text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 max-w-4xl leading-[1.1]">
+        <h1 className="animate-fade-in-up [animation-delay:200ms] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 sm:mb-6 max-w-4xl leading-[1.1]">
           Turn Every DM Into <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 relative inline-block">
             Revenue
             {/* Underline decoration */}
-            <svg className="absolute w-full h-3 -bottom-1 left-0 text-orange-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <svg className="absolute w-full h-2 sm:h-3 -bottom-1 left-0 text-orange-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
             </svg>
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="animate-fade-in-up [animation-delay:400ms] text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+        <p className="animate-fade-in-up [animation-delay:400ms] text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-10 max-w-2xl leading-relaxed">
           AI that <span className="font-semibold text-slate-900">sounds like you</span>, qualifies leads while you sleep, and routes buyers straight to your calendar.
         </p>
 
-        {/* Statistics Bar */}
-        <div className="animate-fade-in-up [animation-delay:600ms] w-full max-w-3xl mb-12 relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 p-6 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 relative z-10">
-            <div className="flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-100 pb-4 md:pb-0 md:pr-4">
-              <span className="text-3xl font-bold text-slate-900">&lt; 30s</span>
-              <span className="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">Response Time</span>
-            </div>
-            <div className="flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-slate-100 pb-4 md:pb-0 md:pr-4">
-              <span className="text-3xl font-bold text-slate-900">3x</span>
-              <span className="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">More Qualified Leads</span>
-            </div>
+        {/* Statistics Bar - Compact on mobile */}
+        <div className="animate-fade-in-up [animation-delay:600ms] w-full max-w-3xl mb-8 sm:mb-12 relative">
+          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 relative z-10">
             <div className="flex flex-col items-center justify-center">
-              <span className="text-3xl font-bold text-slate-900">40%</span>
-              <span className="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">More Booked Calls</span>
+              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">&lt; 30s</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Response</span>
+            </div>
+            <div className="w-px h-8 sm:h-10 bg-slate-200" />
+            <div className="flex flex-col items-center justify-center">
+              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">3x</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Leads</span>
+            </div>
+            <div className="w-px h-8 sm:h-10 bg-slate-200" />
+            <div className="flex flex-col items-center justify-center">
+              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">40%</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Calls</span>
             </div>
           </div>
         </div>
 
         {/* CTA Area */}
-        <div className="animate-fade-in-up [animation-delay:800ms] flex flex-col sm:flex-row items-center gap-4 mb-16">
+        <div className="animate-fade-in-up [animation-delay:800ms] flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-6 sm:mb-16">
           <button
             onClick={scrollToCalendly}
             className="group relative bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_40px_-10px_rgba(249,115,22,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 overflow-hidden"
@@ -109,8 +111,8 @@ const Hero: React.FC = () => {
           </button>
         </div>
 
-        {/* Trust Text */}
-        <div className="animate-fade-in-up [animation-delay:900ms] flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-slate-500 mb-16">
+        {/* Trust Text - Hidden on mobile */}
+        <div className="animate-fade-in-up [animation-delay:900ms] hidden sm:flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-slate-500 mb-16">
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-orange-500" /> 30-minute strategy call
           </span>
@@ -124,8 +126,8 @@ const Hero: React.FC = () => {
           </span>
         </div>
 
-        {/* Infinite Scrolling Feature Cards */}
-        <div className="animate-fade-in-up [animation-delay:1000ms] w-full max-w-[100vw] overflow-hidden relative group/scroller">
+        {/* Infinite Scrolling Feature Cards - Hidden on mobile */}
+        <div className="animate-fade-in-up [animation-delay:1000ms] hidden sm:block w-full max-w-[100vw] overflow-hidden relative group/scroller">
           {/* This mask does the fading effect on the content */}
           <div
             className="flex w-full"
