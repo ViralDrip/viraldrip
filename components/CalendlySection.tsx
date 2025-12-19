@@ -69,19 +69,19 @@ const CalendlySection: React.FC = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-sm font-bold mb-6">
               <Zap className="w-4 h-4 mr-2" fill="currentColor" />
-              Free Strategy Session
+              Free DM Audit
             </div>
 
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-              Get Your
+              Get Your Free
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                DM System Blueprint
+                Instagram DM Audit
               </span>
             </h2>
 
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              In 30 minutes, you'll walk away with a complete roadmap for turning your Instagram DMs into a 24/7 sales machine.
+              In 30 minutes, I'll show you exactly where leads are falling off in your Instagram DMs — and how to fix it.
             </p>
 
             {/* What You Get */}
@@ -90,17 +90,17 @@ const CalendlySection: React.FC = () => {
                 {
                   icon: MapPin,
                   title: 'Leak Analysis',
-                  desc: 'See exactly where leads are falling off in your current flow',
+                  desc: 'See where leads drop off in your DMs',
                 },
                 {
                   icon: Target,
-                  title: 'Custom Strategy',
-                  desc: 'Get a personalized plan tailored to your offer and audience',
+                  title: 'Custom DM Strategy',
+                  desc: 'A clear plan for your Instagram',
                 },
                 {
                   icon: Lightbulb,
-                  title: 'Clear Next Steps',
-                  desc: 'Walk away with actionable items you can implement today',
+                  title: 'AI Fit Assessment',
+                  desc: 'See if automation makes sense for you',
                 },
               ].map((item, i) => (
                 <div
@@ -122,7 +122,7 @@ const CalendlySection: React.FC = () => {
             <div className="flex flex-wrap gap-3">
               {[
                 { icon: Clock, text: '30 minutes' },
-                { icon: ShieldCheck, text: 'No sales pitch' },
+                { icon: ShieldCheck, text: '100% free' },
               ].map((badge, i) => (
                 <span
                   key={i}
@@ -156,7 +156,7 @@ const CalendlySection: React.FC = () => {
 
             {/* Steps Below - Hidden on mobile for cleaner look */}
             <div className="mt-6 hidden sm:flex items-center justify-center gap-4 text-sm">
-              {['Pick time', 'Confirm', 'Get blueprint'].map((step, i) => (
+              {['Pick time', 'Confirm', 'Get your audit'].map((step, i) => (
                 <React.Fragment key={i}>
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-bold flex items-center justify-center">

@@ -34,7 +34,7 @@ const FinalCTA: React.FC = () => {
 
         {/* Headline */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-          Ready to Turn Your DMs Into a
+          Ready to Turn Your Instagram DMs Into a
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
             Sales Machine?
@@ -43,7 +43,7 @@ const FinalCTA: React.FC = () => {
 
         {/* Subheadline */}
         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Your content is already doing the hard work. Let's make sure your DMs don't drop the ball.
+          Your content is bringing the leads. Let's make sure your DMs convert them.
         </p>
 
         {/* CTA Button */}
@@ -53,28 +53,26 @@ const FinalCTA: React.FC = () => {
             withArrow
             className="text-lg py-5 px-12 shadow-brand-lg hover:shadow-[0_10px_60px_0_rgba(249,115,22,0.4)] transition-shadow"
           >
-            Get Your Free DM Blueprint
+            Book Your Free DM Audit
           </Button>
 
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center gap-6 text-slate-400 text-sm">
             <span className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-orange-500" />
-              30-minute call
+              30 minutes
             </span>
             <span className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-orange-500" />
-              Zero commitment
+              100% free
             </span>
           </div>
         </div>
 
         {/* Bottom Quote */}
         <div className="mt-16 pt-10 border-t border-slate-800">
-          <p className="text-slate-500 italic text-lg">
-            "The best time to fix your DM system was yesterday.
-            <br />
-            The second best time is right now."
+          <p className="text-slate-500 text-lg">
+            Or keep leaving money in your Instagram DMs. Your call.
           </p>
         </div>
       </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import { ArrowRight, Play, Zap, Target, Calendar, Clock, Mic, CheckCircle2 } from 'lucide-react';
 
 const features = [
-  { icon: Zap, title: "Instant Response", subtitle: "AI replies in seconds", color: "text-orange-500" },
-  { icon: Target, title: "Smart Qualifying", subtitle: "Scores every lead", color: "text-purple-500" },
-  { icon: Calendar, title: "Auto Booking", subtitle: "Calendar fills itself", color: "text-blue-500" },
-  { icon: Clock, title: "24/7 Availability", subtitle: "Never miss a lead", color: "text-emerald-500" },
-  { icon: Mic, title: "Your Voice", subtitle: "Sounds exactly like you", color: "text-amber-500" },
+  { icon: Zap, title: "Instant Response", subtitle: "AI replies in seconds, not hours", color: "text-orange-500" },
+  { icon: Mic, title: "Sounds Like You", subtitle: "Trained on your voice and content", color: "text-amber-500" },
+  { icon: Target, title: "Smart Qualifying", subtitle: "Know who's ready to buy", color: "text-purple-500" },
+  { icon: Clock, title: "24/7 Autopilot", subtitle: "Works while you sleep", color: "text-emerald-500" },
+  { icon: Calendar, title: "Hot Lead Routing", subtitle: "Only talk to buyers", color: "text-blue-500" },
 ];
 
 const FeatureCard: React.FC<{ icon: React.ElementType; title: string; subtitle: string; color: string }> = ({ icon: Icon, title, subtitle, color }) => (
@@ -47,14 +47,14 @@ const Hero: React.FC = () => {
         {/* Top Badge */}
         <div className="animate-fade-in-up [animation-delay:0ms] inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-5 sm:mb-8 transition-colors hover:border-orange-200 hover:bg-orange-50/50 cursor-default group">
           <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
-          <span className="text-xs sm:text-sm font-medium text-slate-600 group-hover:text-orange-700">For Coaches & Course Creators</span>
+          <span className="text-xs sm:text-sm font-medium text-slate-600 group-hover:text-orange-700">For Instagram Coaches & Course Creators Making $10k-50k/mo</span>
         </div>
 
         {/* Main Headline */}
         <h1 className="animate-fade-in-up [animation-delay:200ms] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 sm:mb-6 max-w-4xl leading-[1.1]">
-          Turn Every DM Into <br className="hidden md:block" />
+          Your Instagram Content Works. <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 relative inline-block">
-            Revenue
+            Your DMs Don't.
             {/* Underline decoration */}
             <svg className="absolute w-full h-2 sm:h-3 -bottom-1 left-0 text-orange-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
@@ -64,25 +64,25 @@ const Hero: React.FC = () => {
 
         {/* Subheadline */}
         <p className="animate-fade-in-up [animation-delay:400ms] text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-10 max-w-2xl leading-relaxed">
-          AI that <span className="font-semibold text-slate-900">sounds like you</span>, qualifies leads while you sleep, and routes buyers straight to your calendar.
+          You're getting DMs, but leads go cold because you can't respond fast enough. Your content is doing its job — <span className="font-semibold text-slate-900">your DMs aren't</span>. We fix that.
         </p>
 
         {/* Statistics Bar - Compact on mobile */}
         <div className="animate-fade-in-up [animation-delay:600ms] w-full max-w-3xl mb-8 sm:mb-12 relative">
           <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 relative z-10">
             <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">&lt; 30s</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Response</span>
+              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">&lt;30s</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Response Time</span>
             </div>
             <div className="w-px h-8 sm:h-10 bg-slate-200" />
             <div className="flex flex-col items-center justify-center">
               <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">3x</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Leads</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Conversions</span>
             </div>
             <div className="w-px h-8 sm:h-10 bg-slate-200" />
             <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">40%</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Calls</span>
+              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">2+ Hrs</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Saved Daily</span>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             className="group relative bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_40px_-10px_rgba(249,115,22,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Get Your Free DM Blueprint
+              Book Your Free DM Audit
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
         {/* Trust Text - Hidden on mobile */}
         <div className="animate-fade-in-up [animation-delay:900ms] hidden sm:flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-slate-500 mb-16">
           <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-orange-500" /> 30-minute strategy call
+            <CheckCircle2 className="w-4 h-4 text-orange-500" /> 30 minutes
           </span>
           <span className="hidden sm:inline text-slate-300">•</span>
           <span className="flex items-center gap-1.5">
@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
           </span>
           <span className="hidden sm:inline text-slate-300">•</span>
           <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-orange-500" /> Zero sales pitch
+            <CheckCircle2 className="w-4 h-4 text-orange-500" /> No pitch
           </span>
         </div>
 

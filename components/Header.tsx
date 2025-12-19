@@ -62,7 +62,7 @@ const Header: React.FC = () => {
         
         <div className="flex items-center gap-4">
           <Button onClick={scrollToCalendly} className="hidden sm:flex text-sm py-2 px-5">
-            Get Free Blueprint
+            Book Free Audit
           </Button>
         </div>
       </div>

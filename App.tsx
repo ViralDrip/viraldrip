@@ -31,12 +31,12 @@ const HomePage: React.FC = () => {
           visualPosition="left"
           stepNumber="01"
           tagline="Instant Response"
-          headline="DM Comes In. AI Replies in Seconds."
-          description="When a lead messages you at 2am or while you're on a client call, your AI agent responds instantly — in your voice, with your personality. No more 'sorry I missed your message' moments."
+          headline="DM Comes In. AI Replies in Seconds. In Your Voice."
+          description="Speed matters — leads go cold in hours, not days. Your AI responds to every Instagram DM instantly, 24/7. And because it's trained on YOUR content, followers can't tell it's not you."
           features={[
-            "Under 30-second response time, 24/7",
-            "Trained on your content and communication style",
-            "Handles inquiries while you focus on what matters"
+            "Instant response to every DM — day or night",
+            "Trained on your content, your tone, your way of talking",
+            "Followers can't tell it's not you"
           ]}
           bgVariant="white"
         >
@@ -49,11 +49,11 @@ const HomePage: React.FC = () => {
           stepNumber="02"
           tagline="Smart Qualifying"
           headline="Natural Conversations That Qualify Every Lead"
-          description="Your AI doesn't just respond — it builds rapport. Through genuine conversation, it discovers what each lead needs, their budget, timeline, and readiness to buy. No robotic questionnaires."
+          description="This isn't a robotic flow-based bot. Your AI has real conversations, asks smart questions, and figures out who's serious vs. who's just curious. It identifies buying readiness through natural dialogue — not rigid scripts."
           features={[
-            "Behavioral scoring based on engagement",
-            "Interest tags detected automatically",
-            "Hot, warm, and cold leads identified instantly"
+            "Real conversations, not robotic scripts",
+            "Identifies budget, timeline, and intent",
+            "Separates hot leads from tire-kickers automatically"
           ]}
           bgVariant="slate"
         >
@@ -65,12 +65,12 @@ const HomePage: React.FC = () => {
           visualPosition="left"
           stepNumber="03"
           tagline="Intelligent Routing"
-          headline="Every Lead Gets the Perfect Next Step"
-          description="High-ticket ready? Straight to your calendar. Need more info? Your best lead magnet. Not ready yet? Into your nurture sequence. Every lead lands exactly where they should."
+          headline="Every Lead Gets Routed to the Right Path"
+          description="Hot leads go directly to you (or to book a call). Warm leads get nurtured automatically. Cold leads are filtered out — no more wasted time. Smart routing based on lead score means you only talk to people ready to buy."
           features={[
-            "Hot leads routed directly to booking",
-            "Product recommendations based on fit",
-            "Automatic nurture for cold leads"
+            "Hot leads → Book a call or direct to offer",
+            "Warm leads → Automated nurture sequence",
+            "You only talk to people ready to buy"
           ]}
           bgVariant="white"
         >
@@ -83,11 +83,11 @@ const HomePage: React.FC = () => {
           stepNumber="04"
           tagline="Full Visibility"
           headline="Your Entire Pipeline, One Dashboard"
-          description="Watch leads flow in real-time. See every conversation, score, and stage at a glance. Know exactly who's hot, who needs follow-up, and where your revenue is coming from."
+          description="See every lead, their score, and status in one place. Know exactly who to prioritize. Track conversations and conversions. Full visibility without the chaos."
           features={[
-            "Real-time lead syncing from Instagram",
-            "Visual pipeline with drag-and-drop stages",
-            "Behavior tracking and engagement signals"
+            "Every lead tracked with buying-readiness score",
+            "See conversation history at a glance",
+            "No leads falling through the cracks"
           ]}
           bgVariant="slate"
         >
@@ -100,11 +100,11 @@ const HomePage: React.FC = () => {
           stepNumber="05"
           tagline="Revenue Recovery"
           headline="Reactivate Dormant Leads. Upsell Happy Customers."
-          description="Your AI remembers everyone. It reaches back out to cold leads with perfect timing and personalized messages. It spots upsell opportunities with existing customers. Money you'd otherwise leave behind."
+          description="Don't let old leads die — your AI re-engages them with perfect timing. Past customers get personalized follow-ups. Turn one-time buyers into repeat customers. Automated but personal."
           features={[
-            "Automated win-back campaigns for inactive leads",
-            "Personalized upsells based on purchase history",
-            "Recover revenue you didn't know you were missing"
+            "Re-engage leads who went quiet",
+            "Upsell sequences for past customers",
+            "Automated follow-up that feels personal"
           ]}
           bgVariant="white"
         >

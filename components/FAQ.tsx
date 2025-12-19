@@ -11,28 +11,28 @@ const FAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: "Will my followers know it's AI?",
-      answer: "The AI is trained on YOUR content, voice, and way of explaining things. It doesn't sound like a generic bot because it isn't one. We analyze your past conversations, content style, and how you naturally communicate — then build an agent that speaks exactly like you would on your best day."
+      question: "Is the audit actually free?",
+      answer: "Yes, 100% free. No credit card, no commitment. You'll get real insights whether we work together or not. If there's a fit, I'll mention it. If not, you still walk away with actionable fixes."
     },
     {
       question: "How is this different from ManyChat?",
-      answer: "ManyChat uses decision trees and keyword triggers — that's why flows often feel robotic. We build an actual AI agent that understands context, handles objections, and has real conversations. It's the difference between a phone menu ('Press 1 for sales') and talking to someone who actually gets what you need."
+      answer: "ManyChat is the delivery system — it sends messages. But flow-based bots follow rigid scripts that break on unexpected questions. We build an AI agent with YOUR knowledge base that actually understands your offer and can have real conversations. That's the difference between robotic and real."
     },
     {
-      question: "What if a lead asks something complex?",
-      answer: "The AI handles 90% of conversations smoothly. For edge cases or high-stakes situations, it gracefully hands off to you with full context — you'll see the entire conversation history and what the lead needs. You stay in control without being stuck in DMs all day."
+      question: "Will the AI actually sound like me?",
+      answer: "Yes — that's the whole point. We train it on YOUR content, YOUR voice, YOUR way of explaining things. We study your posts, captions, and how you talk. Your followers won't be able to tell it's not you."
     },
     {
-      question: "How quickly can this be set up?",
-      answer: "Most systems are live within 2-3 weeks. We handle the heavy lifting — building your AI agent, integrating with your systems, and testing everything. Your involvement is about 4-5 hours total across that period."
+      question: "What if the AI says something wrong?",
+      answer: "We test extensively before going live and set up guardrails for sensitive topics. Plus, we monitor conversations and optimize continuously. A well-trained AI is actually more consistent than a tired human at 11pm."
     },
     {
-      question: "What results can I actually expect?",
-      answer: "Typical results: response times drop from hours to under 30 seconds, qualified conversations increase by 40%+, and booked calls go up 20-30%. But the biggest win? You get hours back every week and never miss a hot lead again."
+      question: "How long until my system is live?",
+      answer: "4 weeks from kickoff. Your time investment is about 4-5 hours total — one kickoff call, some async Q&A, and a final review."
     },
     {
-      question: "Is there a long-term contract?",
-      answer: "No lock-in. After the initial setup, it's month-to-month. We believe in earning your business — if the system isn't delivering, you shouldn't be stuck paying for it. Most clients stay because the ROI is obvious."
+      question: "What results can I expect?",
+      answer: "Most creators save 2+ hours per day on DM management. Response times drop from hours to seconds. And because leads are qualified automatically, you only spend time on people actually ready to buy."
     }
   ];
 
@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
             Got Questions? We've Got Answers.
           </h2>
           <p className="text-lg text-slate-600">
-            Everything you need to know before booking your blueprint session.
+            Everything you need to know about AI-powered Instagram DMs.
           </p>
         </div>
 
