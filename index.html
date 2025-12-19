@@ -34,14 +34,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Plus Jakarta Sans - Modern, geometric, bold and dynamic -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Sora (Headlines - Bold, Geometric, Playful) + DM Sans (Body - Clean with Character) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Sora', 'sans-serif'],
+              sans: ['DM Sans', 'sans-serif'],
             },
             colors: {
               brand: {
@@ -54,7 +57,7 @@
             },
             boxShadow: {
               'brand': '0 4px 14px 0 rgba(249, 115, 22, 0.25)',
-              'brand-lg': '0 10px 40px 0 rgba(249, 115, 22, 0.3)',
+              'brand-lg': '0 10px 40px 0 rgba(249, 115, 22, 0.35)',
               'card': '0 2px 8px 0 rgba(15, 23, 42, 0.06)',
               'card-hover': '0 8px 30px 0 rgba(15, 23, 42, 0.12)',
             },
@@ -159,6 +162,11 @@
       .animate-marquee {
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+      }
+
+      /* Headline font - Sora for all headings */
+      h1, h2, h3, .font-display {
+        font-family: 'Sora', sans-serif;
       }
     </style>
   <script type="importmap">
