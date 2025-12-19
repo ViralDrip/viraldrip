@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play, Zap, Target, Calendar, Clock, Mic, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Play, Zap, Target, Calendar, Clock, Mic, CheckCircle2, Sparkles } from 'lucide-react';
 
 const features = [
   { icon: Zap, title: "Instant Response", subtitle: "AI replies in seconds, not hours", color: "text-orange-500" },
@@ -94,6 +94,7 @@ const Hero: React.FC = () => {
             className="group relative bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_40px_-10px_rgba(249,115,22,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
+              <Sparkles className="w-5 h-5" />
               Book Your Free DM Audit
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
