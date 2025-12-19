@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-0 overflow-hidden">
       {/* White background base */}
       <div className="absolute inset-0 bg-white" />
 
