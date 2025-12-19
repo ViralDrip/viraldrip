@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-full font-bold transition-all duration-500 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2";
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-full font-display font-bold transition-all duration-500 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2";
 
   const variants = {
     // Updated to Solid Orange with soft glow and subtle scale

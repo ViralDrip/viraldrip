@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 <div className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform">
                     <ViralDripLogo className="w-full h-full" />
                 </div>
-                <span className="text-lg font-bold text-white tracking-tight">ViralDrip<span className="text-orange-500">.ai</span></span>
+                <span className="text-lg font-display font-bold text-white tracking-tight">ViralDrip<span className="text-orange-500">.ai</span></span>
             </Link>
             <p className="text-slate-400 text-sm">AI-powered DM systems for Instagram creators.</p>
           </div>

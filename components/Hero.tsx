@@ -15,7 +15,7 @@ const FeatureCard: React.FC<{ icon: React.ElementType; title: string; subtitle: 
       <Icon className={`w-6 h-6 ${color}`} />
     </div>
     <div>
-      <h3 className="font-bold text-slate-900 text-base leading-tight">{title}</h3>
+      <h3 className="font-display font-bold text-slate-900 text-base leading-tight">{title}</h3>
       <p className="text-sm text-slate-500 mt-1">{subtitle}</p>
     </div>
   </div>
@@ -51,9 +51,9 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="animate-fade-in-up [animation-delay:200ms] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 sm:mb-6 max-w-4xl leading-[1.1]">
+        <h1 className="animate-fade-in-up [animation-delay:200ms] font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-4 sm:mb-6 max-w-4xl leading-[1.1]">
           Your Instagram Content Works. <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 relative inline-block">
+          <span className="font-accent italic text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 relative inline-block">
             Your DMs Don't.
             {/* Underline decoration */}
             <svg className="absolute w-full h-2 sm:h-3 -bottom-1 left-0 text-orange-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -71,17 +71,17 @@ const Hero: React.FC = () => {
         <div className="animate-fade-in-up [animation-delay:600ms] w-full max-w-3xl mb-8 sm:mb-12 relative">
           <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 relative z-10">
             <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">&lt;30s</span>
+              <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">&lt;30s</span>
               <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Response Time</span>
             </div>
             <div className="w-px h-8 sm:h-10 bg-slate-200" />
             <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">3x</span>
+              <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">3x</span>
               <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Conversions</span>
             </div>
             <div className="w-px h-8 sm:h-10 bg-slate-200" />
             <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">2+ Hrs</span>
+              <span className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">2+ Hrs</span>
               <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Saved Daily</span>
             </div>
           </div>
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
         <div className="animate-fade-in-up [animation-delay:800ms] flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-6 sm:mb-16">
           <button
             onClick={scrollToCalendly}
-            className="group relative bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_40px_-10px_rgba(249,115,22,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 overflow-hidden"
+            className="group relative font-display bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_40px_-10px_rgba(249,115,22,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
               Book Your Free DM Audit
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
 
           <button
             onClick={scrollToCalendly}
-            className="flex items-center gap-3 px-6 py-4 rounded-full text-slate-700 font-semibold hover:bg-slate-50 transition-colors group"
+            className="flex items-center gap-3 px-6 py-4 rounded-full text-slate-700 font-display font-semibold hover:bg-slate-50 transition-colors group"
           >
             <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
               <Play className="w-4 h-4 text-orange-500 ml-0.5 fill-orange-500" />

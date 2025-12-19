@@ -40,7 +40,7 @@ const StickyBottomCTA: React.FC = () => {
         </div>
         <button
           onClick={scrollToCalendly}
-          className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5"
+          className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-display font-semibold px-6 py-3 rounded-full shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5"
         >
           Book Free Audit
           <ArrowRight className="w-4 h-4" />

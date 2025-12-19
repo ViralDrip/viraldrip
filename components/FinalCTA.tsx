@@ -27,16 +27,16 @@ const FinalCTA: React.FC = () => {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-sm font-bold mb-8">
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-sm font-display font-bold mb-8">
           <Sparkles className="w-4 h-4 mr-2" />
           Stop Leaving Money on the Table
         </div>
 
         {/* Headline */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Ready to Turn Your Instagram DMs Into a
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
+          <span className="font-accent italic text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
             Sales Machine?
           </span>
         </h2>

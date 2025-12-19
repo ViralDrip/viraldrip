@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             <div className="w-8 h-8 text-orange-500 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-md">
                 <ViralDripLogo className="w-full h-full" />
             </div>
-            <span className="text-xl font-bold text-slate-900 tracking-tight">
+            <span className="text-xl font-display font-bold text-slate-900 tracking-tight">
               ViralDrip
               <span className="text-orange-500">.ai</span>
             </span>
