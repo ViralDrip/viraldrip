@@ -8,29 +8,59 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-900 py-12 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+    <footer className="relative bg-stone-950 py-16 overflow-hidden">
+      {/* Subtle gradient at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-stone-700 to-transparent" />
 
-          <div className="mb-6 md:mb-0 text-center md:text-left">
-            <Link to="/" className="flex items-center justify-center md:justify-start space-x-2 mb-2 group">
-                <div className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform">
-                    <ViralDripLogo className="w-full h-full" />
-                </div>
-                <span className="text-lg font-bold text-white tracking-tight">ViralDrip<span className="text-orange-500">.ai</span></span>
+      {/* Very subtle glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-gradient-to-b from-orange-500/5 to-transparent blur-3xl" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          {/* Logo & Description */}
+          <div className="text-center md:text-left">
+            <Link to="/" className="inline-flex items-center space-x-2.5 mb-3 group">
+              <div className="w-7 h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                <ViralDripLogo className="w-full h-full" />
+              </div>
+              <span className="text-lg font-display font-bold text-white tracking-tight">
+                ViralDrip
+                <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">.ai</span>
+              </span>
             </Link>
-            <p className="text-slate-400 text-sm">AI-powered DM systems for Instagram creators.</p>
+            <p className="text-stone-500 text-sm">
+              AI-powered DM systems for Instagram creators.
+            </p>
           </div>
 
-          <div className="flex space-x-6 text-sm text-slate-400">
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
-            <button onClick={scrollToCalendly} className="hover:text-white transition-colors">Contact</button>
+          {/* Links */}
+          <div className="flex items-center space-x-8 text-sm font-medium">
+            <Link
+              to="/privacy"
+              className="text-stone-500 hover:text-white transition-colors duration-300"
+            >
+              Privacy
+            </Link>
+            <Link
+              to="/terms"
+              className="text-stone-500 hover:text-white transition-colors duration-300"
+            >
+              Terms
+            </Link>
+            <button
+              onClick={scrollToCalendly}
+              className="text-stone-500 hover:text-orange-400 transition-colors duration-300"
+            >
+              Contact
+            </button>
           </div>
         </div>
-        
-        <div className="mt-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-          &copy; {new Date().getFullYear()} ViralDrip.ai. All rights reserved.
+
+        {/* Divider */}
+        <div className="mt-12 pt-8 border-t border-stone-800/50">
+          <p className="text-center text-xs text-stone-600">
+            &copy; {new Date().getFullYear()} ViralDrip.ai. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -19,7 +19,7 @@ import Terms from './pages/Terms';
 // Home page component with all the landing page sections
 const HomePage: React.FC = () => {
   return (
-    <div className="font-sans antialiased text-slate-900 bg-white min-h-screen">
+    <div className="font-sans antialiased text-stone-900 bg-white min-h-screen">
       <Header />
 
       <main>
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
             "Identifies budget, timeline, and intent",
             "Separates hot leads from tire-kickers automatically"
           ]}
-          bgVariant="slate"
+          bgVariant="cream"
         >
           <AnimatedQualification />
         </ProcessSection>
@@ -89,7 +89,7 @@ const HomePage: React.FC = () => {
             "See conversation history at a glance",
             "No leads falling through the cracks"
           ]}
-          bgVariant="slate"
+          bgVariant="gradient"
         >
           <AnimatedCRM />
         </ProcessSection>

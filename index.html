@@ -34,84 +34,111 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Plus Jakarta Sans - Modern, geometric, bold and dynamic -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Sora (Headlines - Bold, Geometric, Playful) + DM Sans (Body - Clean with Character) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Sora', 'sans-serif'],
+              sans: ['DM Sans', 'sans-serif'],
             },
             colors: {
               brand: {
                 orange: '#F97316',
                 'orange-dark': '#EA580C',
                 'orange-light': '#FDBA74',
-                dark: '#0F172A',
+                coral: '#FF6B4A',
+                amber: '#F59E0B',
+                cream: '#FFFBEB',
+                dark: '#1C1917',
+                charcoal: '#292524',
                 gray: '#F8FAFC',
               }
             },
             boxShadow: {
-              'brand': '0 4px 14px 0 rgba(249, 115, 22, 0.25)',
-              'brand-lg': '0 10px 40px 0 rgba(249, 115, 22, 0.3)',
-              'card': '0 2px 8px 0 rgba(15, 23, 42, 0.06)',
-              'card-hover': '0 8px 30px 0 rgba(15, 23, 42, 0.12)',
+              'brand': '0 4px 20px -4px rgba(249, 115, 22, 0.35)',
+              'brand-lg': '0 12px 40px -8px rgba(249, 115, 22, 0.4)',
+              'brand-xl': '0 20px 60px -12px rgba(249, 115, 22, 0.5)',
+              'card': '0 4px 20px -4px rgba(28, 25, 23, 0.08)',
+              'card-hover': '0 12px 40px -8px rgba(28, 25, 23, 0.15)',
+              'glow': '0 0 60px rgba(249, 115, 22, 0.3)',
+              'inner-glow': 'inset 0 2px 20px rgba(249, 115, 22, 0.1)',
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+              'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
             },
             animation: {
               'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 8s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 2s infinite',
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'bounce-in': 'bounceIn 0.5s ease-out forwards',
-              'slide-up': 'slideUp 0.4s ease-out forwards',
-              'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
-              'slide-in-right': 'slideInRight 0.5s ease-out forwards',
-              'scale-pop': 'scalePop 0.3s ease-out forwards',
-              'fade-in': 'fadeIn 0.4s ease-out forwards',
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'bounce-in': 'bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+              'slide-up': 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'slide-up-delayed': 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards',
+              'slide-in-left': 'slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'slide-in-right': 'slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'scale-pop': 'scalePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
               'ping-once': 'pingOnce 1s ease-out forwards',
               'fill-bar': 'fillBar 1s ease-out forwards',
               'count-up': 'countUp 0.3s ease-out forwards',
               'marquee': 'marquee 40s linear infinite',
-              'scroll': 'scroll 120s linear infinite',
-              'blob': 'blob 7s infinite',
-              'shimmer': 'shimmer 2s linear infinite',
+              'scroll': 'scroll 80s linear infinite',
+              'blob': 'blob 8s ease-in-out infinite',
+              'blob-slow': 'blob 12s ease-in-out infinite',
+              'shimmer': 'shimmer 2.5s ease-in-out infinite',
+              'wiggle': 'wiggle 0.5s ease-in-out',
+              'morph': 'morph 8s ease-in-out infinite',
+              'spin-slow': 'spin 20s linear infinite',
+              'gradient-x': 'gradientX 3s ease infinite',
             },
             keyframes: {
               float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '50%': { transform: 'translateY(-12px) rotate(1deg)' },
               },
               bounceIn: {
                 '0%': { transform: 'scale(0.3)', opacity: '0' },
-                '50%': { transform: 'scale(1.05)' },
-                '70%': { transform: 'scale(0.9)' },
+                '50%': { transform: 'scale(1.08)' },
+                '70%': { transform: 'scale(0.95)' },
                 '100%': { transform: 'scale(1)', opacity: '1' },
               },
               slideUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
                 '100%': { transform: 'translateY(0)', opacity: '1' },
               },
               slideInLeft: {
-                '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                '0%': { transform: 'translateX(-40px)', opacity: '0' },
                 '100%': { transform: 'translateX(0)', opacity: '1' },
               },
               slideInRight: {
-                '0%': { transform: 'translateX(30px)', opacity: '0' },
+                '0%': { transform: 'translateX(40px)', opacity: '0' },
                 '100%': { transform: 'translateX(0)', opacity: '1' },
               },
               scalePop: {
                 '0%': { transform: 'scale(0.8)', opacity: '0' },
-                '50%': { transform: 'scale(1.1)' },
+                '50%': { transform: 'scale(1.05)' },
                 '100%': { transform: 'scale(1)', opacity: '1' },
               },
               fadeIn: {
                 '0%': { opacity: '0' },
                 '100%': { opacity: '1' },
               },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(24px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
               pingOnce: {
                 '0%': { transform: 'scale(1)', opacity: '1' },
-                '75%': { transform: 'scale(1.5)', opacity: '0' },
-                '100%': { transform: 'scale(1.5)', opacity: '0' },
+                '75%': { transform: 'scale(1.8)', opacity: '0' },
+                '100%': { transform: 'scale(1.8)', opacity: '0' },
               },
               fillBar: {
                 '0%': { width: '0%' },
@@ -130,18 +157,25 @@
                 '100%': { transform: 'translateX(-100%)' },
               },
               blob: {
-                '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                '0%, 100%': { transform: 'translate(0px, 0px) scale(1) rotate(0deg)' },
+                '33%': { transform: 'translate(30px, -40px) scale(1.1) rotate(5deg)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.95) rotate(-3deg)' },
               },
               shimmer: {
-                from: { backgroundPosition: '0 0' },
-                to: { backgroundPosition: '-200% 0' },
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' },
               },
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-2deg)' },
+                '50%': { transform: 'rotate(2deg)' },
+              },
+              morph: {
+                '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+                '50%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
+              },
+              gradientX: {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
               },
             }
           }
@@ -155,10 +189,74 @@
         scroll-behavior: smooth;
       }
 
+      /* Custom selection color */
+      ::selection {
+        background: rgba(249, 115, 22, 0.2);
+        color: #1C1917;
+      }
+
       /* Smooth marquee animation */
       .animate-marquee {
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #F97316, #EA580C);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #EA580C, #C2410C);
+      }
+
+      /* Noise texture overlay */
+      .noise-overlay::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        mix-blend-mode: overlay;
+      }
+
+      /* Fluid gradient animation */
+      .gradient-animate {
+        background-size: 200% 200%;
+        animation: gradientX 3s ease infinite;
+      }
+
+      /* Text gradient animation */
+      .text-gradient-animate {
+        background-size: 200% auto;
+        animation: shimmer 3s linear infinite;
+      }
+
+      /* Hover lift effect */
+      .hover-lift {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-4px);
+      }
+
+      /* Glass morphism */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      /* Headline font */
+      h1, h2, h3, .font-display {
+        font-family: 'Sora', sans-serif;
       }
     </style>
   <script type="importmap">
@@ -175,7 +273,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
+  <body class="antialiased">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

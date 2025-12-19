@@ -1,22 +1,22 @@
 import React from 'react';
-import { ArrowRight, Play, Zap, Target, Calendar, Clock, Mic, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Play, Zap, Target, Calendar, Clock, Mic, CheckCircle2, Sparkles } from 'lucide-react';
 
 const features = [
-  { icon: Zap, title: "Instant Response", subtitle: "AI replies in seconds, not hours", color: "text-orange-500" },
-  { icon: Mic, title: "Sounds Like You", subtitle: "Trained on your voice and content", color: "text-amber-500" },
-  { icon: Target, title: "Smart Qualifying", subtitle: "Know who's ready to buy", color: "text-purple-500" },
-  { icon: Clock, title: "24/7 Autopilot", subtitle: "Works while you sleep", color: "text-emerald-500" },
-  { icon: Calendar, title: "Hot Lead Routing", subtitle: "Only talk to buyers", color: "text-blue-500" },
+  { icon: Zap, title: "Instant Response", subtitle: "AI replies in seconds, not hours", color: "from-orange-500 to-amber-500" },
+  { icon: Mic, title: "Sounds Like You", subtitle: "Trained on your voice and content", color: "from-rose-500 to-orange-500" },
+  { icon: Target, title: "Smart Qualifying", subtitle: "Know who's ready to buy", color: "from-violet-500 to-purple-500" },
+  { icon: Clock, title: "24/7 Autopilot", subtitle: "Works while you sleep", color: "from-emerald-500 to-teal-500" },
+  { icon: Calendar, title: "Hot Lead Routing", subtitle: "Only talk to buyers", color: "from-blue-500 to-cyan-500" },
 ];
 
 const FeatureCard: React.FC<{ icon: React.ElementType; title: string; subtitle: string; color: string }> = ({ icon: Icon, title, subtitle, color }) => (
-  <div className="group flex-shrink-0 w-[280px] p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer text-left flex items-center gap-4 mx-2">
-    <div className="p-3 rounded-xl bg-slate-50 group-hover:bg-orange-50 transition-colors shrink-0">
-      <Icon className={`w-6 h-6 ${color}`} />
+  <div className="group flex-shrink-0 w-[300px] p-6 rounded-3xl bg-white/80 backdrop-blur-sm border border-stone-200/60 shadow-card hover:shadow-card-hover hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer text-left flex items-center gap-5 mx-3">
+    <div className={`p-4 rounded-2xl bg-gradient-to-br ${color} shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shrink-0`}>
+      <Icon className="w-6 h-6 text-white" strokeWidth={2.5} />
     </div>
     <div>
-      <h3 className="font-bold text-slate-900 text-base leading-tight">{title}</h3>
-      <p className="text-sm text-slate-500 mt-1">{subtitle}</p>
+      <h3 className="font-display font-bold text-stone-900 text-lg leading-tight">{title}</h3>
+      <p className="text-sm text-stone-500 mt-1 font-medium">{subtitle}</p>
     </div>
   </div>
 );
@@ -28,115 +28,153 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* White background base */}
-      <div className="absolute inset-0 bg-white" />
+      {/* Warm cream background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-orange-50/50 via-white to-white" />
 
-      {/* Background Decor - Soft Line Grid (centered on content) */}
+      {/* Animated blob shapes */}
+      <div className="absolute top-20 -left-32 w-96 h-96 bg-gradient-to-br from-orange-300/30 to-amber-200/20 rounded-full blur-3xl animate-blob" />
+      <div className="absolute top-40 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-rose-200/20 to-orange-200/30 rounded-full blur-3xl animate-blob-slow" />
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-gradient-to-br from-amber-200/20 to-yellow-100/20 rounded-full blur-3xl animate-blob" style={{ animationDelay: '2s' }} />
+
+      {/* Subtle grid pattern */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none opacity-[0.4]"
         style={{
-          backgroundImage: 'linear-gradient(to right, #e8eaed 1px, transparent 1px), linear-gradient(to bottom, #e8eaed 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-          maskImage: 'radial-gradient(ellipse 50% 50% at 50% 40%, #000 30%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 50% 50% at 50% 40%, #000 30%, transparent 70%)',
+          backgroundImage: `radial-gradient(circle at 1px 1px, #f97316 1px, transparent 0)`,
+          backgroundSize: '48px 48px',
+          maskImage: 'radial-gradient(ellipse 60% 60% at 50% 35%, #000 20%, transparent 70%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 60% 60% at 50% 35%, #000 20%, transparent 70%)',
         }}
       />
 
-      <div className="relative pt-24 sm:pt-32 pb-8 sm:pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
+      <div className="relative pt-28 sm:pt-36 pb-12 sm:pb-24 lg:pt-52 lg:pb-36 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
 
-        {/* Top Badge */}
-        <div className="animate-fade-in-up [animation-delay:0ms] inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-5 sm:mb-8 transition-colors hover:border-orange-200 hover:bg-orange-50/50 cursor-default group">
-          <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-pulse" />
-          <span className="text-xs sm:text-sm font-medium text-slate-600 group-hover:text-orange-700">For Instagram Coaches & Course Creators Making $10k-50k/mo</span>
+        {/* Top Badge - More playful */}
+        <div className="animate-fade-in-up [animation-delay:0ms] inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-white border-2 border-orange-200 shadow-lg shadow-orange-100/50 mb-6 sm:mb-10 transition-all hover:scale-105 hover:shadow-xl hover:shadow-orange-200/50 cursor-default group">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span>
+          </span>
+          <span className="text-xs sm:text-sm font-semibold text-stone-700 group-hover:text-orange-700 transition-colors">For Instagram Coaches & Course Creators Making $10k-50k/mo</span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="animate-fade-in-up [animation-delay:200ms] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 sm:mb-6 max-w-4xl leading-[1.1]">
-          Your Instagram Content Works. <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 relative inline-block">
-            Your DMs Don't.
-            {/* Underline decoration */}
-            <svg className="absolute w-full h-2 sm:h-3 -bottom-1 left-0 text-orange-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
-              <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+        {/* Main Headline - Bolder, more energetic */}
+        <h1 className="animate-fade-in-up [animation-delay:150ms] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-extrabold tracking-tight text-stone-900 mb-5 sm:mb-7 max-w-5xl leading-[1.05]">
+          Your Instagram Content Works.{' '}
+          <br className="hidden md:block" />
+          <span className="relative inline-block">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500">
+              Your DMs Don't.
+            </span>
+            {/* Playful underline decoration */}
+            <svg className="absolute w-full h-3 sm:h-4 -bottom-1 sm:-bottom-2 left-0" viewBox="0 0 200 12" preserveAspectRatio="none">
+              <path
+                d="M2 8 Q 40 2 80 8 T 160 6 T 198 8"
+                stroke="url(#underline-gradient)"
+                strokeWidth="4"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <defs>
+                <linearGradient id="underline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#FDBA74" />
+                  <stop offset="50%" stopColor="#F97316" />
+                  <stop offset="100%" stopColor="#EA580C" />
+                </linearGradient>
+              </defs>
             </svg>
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="animate-fade-in-up [animation-delay:400ms] text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-10 max-w-2xl leading-relaxed">
-          You're getting DMs, but leads go cold because you can't respond fast enough. Your content is doing its job — <span className="font-semibold text-slate-900">your DMs aren't</span>. We fix that.
+        <p className="animate-fade-in-up [animation-delay:300ms] text-base sm:text-lg md:text-xl lg:text-2xl text-stone-600 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-medium">
+          You're getting DMs, but leads go cold because you can't respond fast enough. Your content is doing its job — <span className="font-bold text-stone-900">your DMs aren't</span>. We fix that.
         </p>
 
-        {/* Statistics Bar - Compact on mobile */}
-        <div className="animate-fade-in-up [animation-delay:600ms] w-full max-w-3xl mb-8 sm:mb-12 relative">
-          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 relative z-10">
-            <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">&lt;30s</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Response Time</span>
+        {/* Statistics Bar - More visual pop */}
+        <div className="animate-fade-in-up [animation-delay:450ms] w-full max-w-3xl mb-10 sm:mb-14 relative">
+          {/* Glow behind */}
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-amber-500/20 to-orange-500/20 blur-2xl rounded-3xl scale-105" />
+
+          <div className="relative flex justify-center items-center gap-6 sm:gap-10 md:gap-14 p-6 sm:p-8 rounded-3xl bg-white/90 backdrop-blur-sm border border-stone-200/80 shadow-2xl shadow-orange-500/10">
+            <div className="flex flex-col items-center justify-center group cursor-default">
+              <span className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-orange-600 to-amber-500 group-hover:scale-110 transition-transform">&lt;30s</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-bold text-stone-500 uppercase tracking-wider mt-1 sm:mt-2">Response Time</span>
             </div>
-            <div className="w-px h-8 sm:h-10 bg-slate-200" />
-            <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">3x</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">More Conversions</span>
+            <div className="w-px h-12 sm:h-14 bg-gradient-to-b from-transparent via-stone-300 to-transparent" />
+            <div className="flex flex-col items-center justify-center group cursor-default">
+              <span className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-orange-600 to-amber-500 group-hover:scale-110 transition-transform">3x</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-bold text-stone-500 uppercase tracking-wider mt-1 sm:mt-2">More Conversions</span>
             </div>
-            <div className="w-px h-8 sm:h-10 bg-slate-200" />
-            <div className="flex flex-col items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">2+ Hrs</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-medium text-slate-500 uppercase tracking-wide mt-0.5 sm:mt-1">Saved Daily</span>
+            <div className="w-px h-12 sm:h-14 bg-gradient-to-b from-transparent via-stone-300 to-transparent" />
+            <div className="flex flex-col items-center justify-center group cursor-default">
+              <span className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-orange-600 to-amber-500 group-hover:scale-110 transition-transform">2+ Hrs</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-bold text-stone-500 uppercase tracking-wider mt-1 sm:mt-2">Saved Daily</span>
             </div>
           </div>
         </div>
 
-        {/* CTA Area */}
-        <div className="animate-fade-in-up [animation-delay:800ms] flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-6 sm:mb-16">
+        {/* CTA Area - More playful buttons */}
+        <div className="animate-fade-in-up [animation-delay:600ms] flex flex-col sm:flex-row items-center gap-4 sm:gap-5 mb-8 sm:mb-20">
           <button
             onClick={scrollToCalendly}
-            className="group relative bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_40px_-10px_rgba(249,115,22,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 overflow-hidden"
+            className="group relative bg-gradient-to-r from-orange-500 via-orange-500 to-amber-500 hover:from-orange-600 hover:via-orange-600 hover:to-amber-600 text-white text-lg font-display font-bold py-5 px-10 rounded-full transition-all duration-300 shadow-brand-lg hover:shadow-brand-xl hover:-translate-y-1 hover:scale-[1.02] flex items-center gap-3 overflow-hidden"
           >
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex items-center gap-3">
+              <Sparkles className="w-5 h-5" />
               Book Your Free DM Audit
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+            {/* Shimmer effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 ease-out" />
           </button>
 
           <button
             onClick={scrollToCalendly}
-            className="flex items-center gap-3 px-6 py-4 rounded-full text-slate-700 font-semibold hover:bg-slate-50 transition-colors group"
+            className="flex items-center gap-4 px-8 py-5 rounded-full text-stone-700 font-display font-semibold hover:bg-white/80 hover:shadow-lg transition-all duration-300 group"
           >
-            <div className="w-10 h-10 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Play className="w-4 h-4 text-orange-500 ml-0.5 fill-orange-500" />
+            <div className="w-12 h-12 rounded-full bg-white border-2 border-stone-200 shadow-md flex items-center justify-center group-hover:scale-110 group-hover:border-orange-300 group-hover:shadow-orange-100 transition-all duration-300">
+              <Play className="w-5 h-5 text-orange-500 ml-0.5 fill-orange-500" />
             </div>
-            See How It Works
+            <span className="group-hover:text-orange-600 transition-colors">See How It Works</span>
           </button>
         </div>
 
         {/* Trust Text - Hidden on mobile */}
-        <div className="animate-fade-in-up [animation-delay:900ms] hidden sm:flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-slate-500 mb-16">
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-orange-500" /> 30 minutes
+        <div className="animate-fade-in-up [animation-delay:750ms] hidden sm:flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm text-stone-500 mb-20 font-medium">
+          <span className="flex items-center gap-2 hover:text-orange-600 transition-colors cursor-default">
+            <div className="w-5 h-5 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+              <CheckCircle2 className="w-3 h-3 text-white" strokeWidth={3} />
+            </div>
+            30 minutes
           </span>
-          <span className="hidden sm:inline text-slate-300">•</span>
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-orange-500" /> 100% free
+          <span className="text-stone-300">|</span>
+          <span className="flex items-center gap-2 hover:text-orange-600 transition-colors cursor-default">
+            <div className="w-5 h-5 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+              <CheckCircle2 className="w-3 h-3 text-white" strokeWidth={3} />
+            </div>
+            100% free
           </span>
-          <span className="hidden sm:inline text-slate-300">•</span>
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-orange-500" /> No pitch
+          <span className="text-stone-300">|</span>
+          <span className="flex items-center gap-2 hover:text-orange-600 transition-colors cursor-default">
+            <div className="w-5 h-5 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+              <CheckCircle2 className="w-3 h-3 text-white" strokeWidth={3} />
+            </div>
+            No pitch
           </span>
         </div>
 
-        {/* Infinite Scrolling Feature Cards - Hidden on mobile */}
-        <div className="animate-fade-in-up [animation-delay:1000ms] hidden sm:block w-full max-w-[100vw] overflow-hidden relative group/scroller">
-          {/* This mask does the fading effect on the content */}
+        {/* Infinite Scrolling Feature Cards - Enhanced */}
+        <div className="animate-fade-in-up [animation-delay:900ms] hidden sm:block w-full max-w-[100vw] overflow-hidden relative group/scroller">
+          {/* Fade masks */}
           <div
             className="flex w-full"
             style={{
-              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+              maskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
             }}
           >
-            <div className="flex min-w-full shrink-0 gap-4 animate-scroll group-hover/scroller:[animation-play-state:paused] py-4">
+            <div className="flex min-w-full shrink-0 gap-6 animate-scroll group-hover/scroller:[animation-play-state:paused] py-6">
               {[...features, ...features, ...features].map((feature, idx) => (
                 <FeatureCard
                   key={`scroll-1-${idx}`}
@@ -147,7 +185,7 @@ const Hero: React.FC = () => {
                 />
               ))}
             </div>
-            <div className="flex min-w-full shrink-0 gap-4 animate-scroll group-hover/scroller:[animation-play-state:paused] py-4" aria-hidden="true">
+            <div className="flex min-w-full shrink-0 gap-6 animate-scroll group-hover/scroller:[animation-play-state:paused] py-6" aria-hidden="true">
               {[...features, ...features, ...features].map((feature, idx) => (
                 <FeatureCard
                   key={`scroll-2-${idx}`}
