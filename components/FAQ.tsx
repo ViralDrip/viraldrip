@@ -45,12 +45,12 @@ const FAQ: React.FC = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-sm font-display font-semibold mb-4">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold mb-4">
             <HelpCircle className="w-4 h-4 mr-2" />
             Common Questions
           </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Got Questions? <span className="font-accent italic">We've Got Answers.</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Got Questions? We've Got Answers.
           </h2>
           <p className="text-lg text-slate-600">
             Everything you need to know about AI-powered Instagram DMs.
@@ -72,7 +72,7 @@ const FAQ: React.FC = () => {
                 className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className={`font-display font-bold text-lg transition-colors ${
+                <span className={`font-bold text-lg transition-colors ${
                   openIndex === index ? 'text-orange-600' : 'text-slate-900 group-hover:text-slate-700'
                 }`}>
                   {faq.question}

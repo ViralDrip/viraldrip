@@ -67,15 +67,15 @@ const CalendlySection: React.FC = () => {
           {/* Left Content */}
           <div>
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-sm font-display font-bold mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-sm font-bold mb-6">
               <Zap className="w-4 h-4 mr-2" fill="currentColor" />
               Free DM Audit
             </div>
 
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
               Get Your Free
               <br />
-              <span className="font-accent italic text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
                 Instagram DM Audit
               </span>
             </h2>
@@ -111,7 +111,7 @@ const CalendlySection: React.FC = () => {
                     <item.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-white mb-1">{item.title}</h3>
+                    <h3 className="font-bold text-white mb-1">{item.title}</h3>
                     <p className="text-sm text-slate-400">{item.desc}</p>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ const CalendlySection: React.FC = () => {
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
               {/* Calendly Header */}
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-4 sm:px-6 py-4">
-                <h3 className="text-white font-display font-bold text-lg">Pick Your Time</h3>
+                <h3 className="text-white font-bold text-lg">Pick Your Time</h3>
                 <p className="text-orange-100 text-sm">Choose a slot that works for you</p>
               </div>
 

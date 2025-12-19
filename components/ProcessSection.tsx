@@ -79,16 +79,16 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
           >
             {/* Step Badge */}
             <div className="inline-flex items-center gap-3 mb-6">
-              <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-display font-bold text-lg shadow-brand">
+              <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-lg shadow-brand">
                 {stepNumber}
               </span>
-              <span className="text-orange-500 font-display font-bold text-sm uppercase tracking-widest">
+              <span className="text-orange-500 font-bold text-sm uppercase tracking-widest">
                 {tagline}
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
               {headline}
             </h2>
 
